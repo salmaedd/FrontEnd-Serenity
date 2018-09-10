@@ -1,0 +1,28 @@
+ <div class="form-group">
+    <label for="name">MyName</label>
+</div>
+{{nom}}
+<input #myName id="name" [(ngModel)]="nom" type="text" placeholder="your name" class="form-control" (keyup.enter)="add(myName)">
+<button (click)="ajouter()" class="btn"[class.btn-success]="courses.length>5">
+  <i class="fa fa-plus">add</i>
+</button>
+<ul>
+ <li *ngFor="let course of courses" >{{course}}
+      <button (click)="delete(course)" class="btn btn-danger btn-sm"> 
+          <i class="fa fa-trash"></i>
+        </button>
+</li>
+</ul>
+Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium ducimus ea perspiciatis accusamus blanditiis odio natus aut quibusdam ipsum nostrum, assumenda rerum numquam doloribus nemo et dicta molestiae aperiam! Eveniet.
+<ul>
+  <li>{{course.title|lowercase}}  </li>
+  <li>{{course.avis|number:'1.2-2'}}</li>
+  <li>{{course.prix|currency:'EUR':'symbol'}}</li>
+  <li>{{course.datepub|date:'MM/dd/yyyy'}}</li>
+  <li>{{course.content|resume:4}}</li>
+</ul>
+
+    <i (click)='et=!et' class="fa fa-star"[class.fa-star-o]="et" [class.fa-star]="!et"  aria-hidden="true"></i>
+    
+ 
+

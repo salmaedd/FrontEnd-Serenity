@@ -1,0 +1,66 @@
+<!-- 
+
+  <div class="col-6 mx-auto ">
+      <button class="btn btn-primary " (click)="change()"> ss </button>
+  </div>
+<div class="row" *ngIf=(etat)>
+<div class="col-6 mx-auto">
+<h1>New Post</h1>
+  <div class="form-group">
+    <label for="title"></label>
+    <input [(ngModel)]="post.title" class="form-control" type="text" name="title" id="title">
+  </div>
+
+  <div class="form-group">
+      <label for="body"></label>
+      <textarea [(ngModel)]="post.body" class="form-control" type="text" name="body" id="body" rows="4"></textarea>
+  </div>
+    <button  *ngIf="!operation" class="btn btn-succes btn-block" (click)="savePost()"> Save </button>
+    <button *ngIf="operation" class="btn btn-warning btn-block" (click)="updatePost()"> Update </button>
+</div>
+</div>
+
+
+<div class="row">
+
+  <div class="col-8-mx-auto">
+
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let post of myPosts ; index as i" >
+      <h3>{{post.id}}</h3>
+      <h5> {{post.title}}</h5>
+      <em>{{post.body}}</em>
+      <button (click)="deletePost(post.id,i)" class="btn btn-danger ml-2" ><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+      <button (click)="editPost(post)" class="btn btn-primary ml-2"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+   
+      
+
+      </li>
+    </ul>
+
+  </div>
+</div>  -->
+
+
+
+
+<div class="row">
+
+    <div class="col-8-mx-auto">
+  
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let user of myUser" >
+     
+        <h5> {{user.name}}</h5>
+        <em>{{user.username}}</em>  
+        <h4>{{user.email}}</h4>
+        <h3>{{user.address.street}}</h3>
+        <h3>{{user.address.suite}}</h3>
+        <h3>{{user.address.city}}</h3>
+
+     
+        </li>
+      </ul>
+  
+    </div>
+  </div> 
